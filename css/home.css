@@ -1,0 +1,566 @@
+@charset "UTF-8";
+@import url(common.css);
+@import url(reseter.css);
+
+html{
+    background-color: #000;
+}
+body{
+    color: #f5f5f5;
+}
+
+.header{
+    height: 85px;
+    position: relative;
+    z-index: 99999;
+} 
+.header .inner{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin: 30px auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border: 2px solid #f5f5f5;
+    font-family: 'pre_ex';
+}
+.header .inner .logo{
+    margin-left: 45px;
+}
+.header .inner .nav{    
+    height: 100%;
+    text-align: center;
+}
+.header .inner .nav .gnb{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header .inner .nav .gnb > li{
+    position: relative;
+}
+.header .inner .nav .gnb > li .depth1{
+    width: 120px;
+    line-height: 85px;
+    display: block;
+    padding: 0 20px;
+}
+.header .inner .nav .gnb > li .depth2{
+    position: absolute;
+    width: 100%;
+    top: 82.5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #000;
+    display: none;
+}
+.header .inner .nav .gnb > li .depth2 li{
+    margin: 20px 0;
+}
+
+
+.header .inner .util{
+    display: flex;
+    gap: 20px;
+    font-family: 'pre_b';
+    justify-content: center;
+    align-items: center;
+    margin-right: 45px;
+}
+.header .inner .util li a{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.header .inner .util li a p{
+    margin-left: 13px;
+    font-size: 14px;
+}
+.header .inner .util li a img{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+
+.header.active{
+    color:#333333;
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+.header.active .inner{
+    background-color: #f5f5f5;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    border: none;
+}
+.header.active .inner .nav .gnb > li .depth2{
+    background-color: #F5F5F5;
+}
+.header.active .inner .logo a img{
+    content: url('../img/logo.png');
+}
+.header.active .inner .util .login img{
+    content: url('../img/User\ \(1\).png');
+}
+.header.active .inner .util .ticket img{
+    content: url('../img/Ticket\ \(1\).png');
+}
+.header.active .inner .util .menu img{
+    content: url('../img/Menu\ \(2\).png');
+}
+
+/* 메인광고 */
+.main_visual{
+    width: 100%;
+    height: 900px;
+}
+.main_visual .mySwiper > .swiper-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* section1 - 현재상영작*/
+.section1 {
+    width: 100%;
+    height: 1106px;
+    margin-top: 160px;
+}
+.section1 .title{
+    margin-bottom: 10px;
+}
+.section1 .mySwiper1 .swiper-slide .text{
+    display: none;
+}
+.section1 .mySwiper1 .swiper-slide .button{
+    display: none;
+}
+.section1 .mySwiper1 .swiper-slide-active .image{
+    position: relative;
+    overflow: hidden;
+}
+.section1 .mySwiper1 .swiper-slide-active .image .button{
+    display: block;
+    height: 100%;
+    width: 94%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 0.7s;
+    background-color: #000000b6;
+    color: #f0f8ff;
+    backdrop-filter: blur(5px);
+}
+.section1 .mySwiper1 .swiper-slide-active .image .button a h2 {
+    border: 1px solid #f5f5f5;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+}
+.section1 .mySwiper1 .swiper-slide-active:hover .button{
+    transform: translateY(0);
+}
+
+.section1 .mySwiper1 .swiper-slide-active .text{
+    display: block;
+}
+.section1 .mySwiper1 .swiper-slide-active .text h4{
+    font-family: 'pre_ex';
+    font-size: 32px;
+    text-align: center;
+    margin: 40px 0 9px;
+}
+.section1 .mySwiper1 .swiper-slide-active .text .date{
+    display: flex;
+    gap: 15px;
+    font-family: 'pre_m';
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.section1 .mySwiper1 .swiper-slide-active .text .date li{
+    position: relative;
+    height: 24px;
+}
+.section1 .mySwiper1 .swiper-slide-active .text .date li::before{
+    content: '';
+    width: 2px;
+    height: 20px;
+    background-color: #595959;
+    position: absolute;
+    top: 50%;
+    left: -19%;
+    transform: translate(25%,-55%);
+    display: block;
+}
+.section1 .mySwiper1 .swiper-slide-active .text .date li:nth-child(1)::before{
+    display: none;
+}
+.section1 .mySwiper1 .swiper-slide-active .text span{
+    font-family: 'pre_l';
+    font-size: 18px;
+    word-break: keep-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    width: 85px;
+    background: url("../img/Back.png") center center / cover no-repeat;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    width: 85px;
+    background: url("../img/Forward.png") center center / cover no-repeat;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    display: none;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    display: none;
+}
+
+/* section2 - 스페셜관 */
+.section2{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin: 160px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.section2 .left{
+    align-content: center;
+}
+.section2 .left .button a{
+    display: flex;
+    align-items: center;
+}
+.section2 .left .button a p{
+    font-family: 'pre_b';
+    font-size: 24px;
+    margin-right: 20px;
+}
+.section2 .left .title{
+    text-align: start;
+}
+.section2 .left > p{
+    font-family: 'pre_m';
+    font-size: 32px;
+    margin: 40px 0 100px;
+}
+
+.section2 .right{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.section2 .right .mySwiper5{
+    height: 695px;
+}
+.section2 .right .mySwiper5 .swiper-wrapper{
+    width: 400px;
+}
+.section2 .right .mySwiper5 .swiper-wrapper .swiper-slide{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+.section2 .right .mySwiper5 .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+}
+.section2 .right .mySwiper5 .swiper-wrapper .swiper-slide::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000059;
+}
+.section2 .right .mySwiper5 .swiper-wrapper .swiper-slide .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.section2 .right .mySwiper5 .swiper-wrapper .swiper-slide .text h2{
+    font-family: 'pre_ex';
+    font-size: 40px
+}
+.section2 .right .mySwiper5 .swiper-wrapper .swiper-slide .text p{
+    font-family: 'pre_l';
+    font-size: 32px;
+}
+
+
+
+
+/* section3 - 진행중이벤트 */
+.section3{
+    width: 1555px;
+    height: 600px;
+    margin: 0 auto;
+}
+.section3 .title{
+    margin-bottom: 31px;
+}
+.section3 .mySwiper2 .swiper-wrapper .swiper-slide{
+    width: calc(100% / 3);
+}
+.section3 .mySwiper2 .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 377px;
+    object-fit: cover;
+}
+.section3 .mySwiper2 .control{
+    text-align: right;
+}
+.section3 .mySwiper2 .control .stop{
+    background-color: black;
+}
+.section3 .mySwiper2 .control .play{
+    background-color: black;
+}
+
+
+/* section4 - 시사회/무대인사 */
+.section4{
+    background: url('../img/BACK.jpg') center center / cover no-repeat;
+    height: 750px;
+    margin: 160px 0;
+    position: relative;
+    z-index: -0;
+}
+.section4::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000073;
+    backdrop-filter: blur(15px);
+    z-index: -3;
+}
+.section4 .title{
+    padding: 60px 0 40px;
+}
+.section4 .mySwiper3{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+}
+.section4 .mySwiper3 .swiper-slide{
+    width: calc(100% / 4);
+    border-radius: 15px;
+}
+.section4 .mySwiper3 .swiper-slide img{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.section4 .mySwiper3 .swiper-slide .text{
+    margin-top: 20px;
+    text-align: center;
+}
+.section4 .mySwiper3 .swiper-slide .text p{
+    font-family: 'pre_ex';
+    font-size: 20px;
+}
+.section4 .mySwiper3 .swiper-slide .text span{
+    font-family: 'pre_l';
+    font-size: 18px;
+}
+.bb3 .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 30%;
+    height: 95%;
+    width: 52px;
+    background: url("../img/Back\ \(1\).png") center center / 100% no-repeat;
+}
+.bb3 .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: 30%;
+    height: 95%;
+    width: 52px;
+    background: url("../img/Forward\ \(1\).png") center center / 100% no-repeat;
+}
+.bb3 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    display: none;
+}
+.bb3 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    display: none;
+}
+
+
+/* section5 - 공지사항 */
+.section5{
+    background-color: #333333;
+    height: 100px;
+}
+.section5 .items{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+}
+.section5 .items .left{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.section5 .items .left h2{
+    font-family: 'pre_ex';
+    font-size: 205%;
+    margin-right: 62px;
+}
+.section5 .items .left::after{
+    content: '';
+    width: 2px;
+    height: 70px;
+    background-color: #d9d9d9;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+.section5 .items .left .mySwiper4{
+    line-height: 50px;
+    height: 50px;
+}
+.section5 .items .left .mySwiper4 .swiper-wrapper{
+    height: 500px;
+    font-family: 'pre_l';
+    font-size: 150%;
+}
+.section5 .items .right a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'pre_b';
+    font-size: 150%;
+    gap: 10px;
+}
+
+/* section6 - 멤버십 */
+.section6{
+    color: #333333;
+    font-family: 'pre_ex';
+    font-size: 125%;
+    margin: 60px 0 160px;
+    position: relative;
+}
+.section6 .item_wrap{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    height: 100%s;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.section6 .item_wrap .item{
+    width: calc(100% / 5);
+    height: 225px;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+}
+.section6 .item_wrap .item a{
+    display: block;
+    height: 100%;
+    align-content: center;
+    justify-items: center;
+}
+.section6 .item_wrap .item img{
+    display: block;
+    height: 70px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.section6::after{
+    content: '';
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    border-radius: 0 0 25px 25px;
+    bottom: -80%;
+    left: 0;
+    position: absolute;
+}
+
+/* footer */
+.footer{
+    background-color: #F5F5F5;
+    color: #595959;
+    height: 445px;
+}
+.footer .footer_item{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: block;
+    font-family: 'pre_l';
+    font-size: 100%;
+}
+.footer .footer_item .award{
+    height: 150px;
+    align-content: center;
+}
+.footer .footer_item .award img{
+    margin-right: 20px;
+}
+.footer .footer_item .icons{
+    display: flex;
+    gap: 95px;
+}
+.footer .footer_item .icons .sns img{
+    margin-right: 20px;
+}
+.footer .footer_item .company{
+    padding: 20px 0;
+}
+.footer .footer_item ul{
+    display: flex;
+}
+.footer .footer_item ul li{
+    margin-right: 10px;
+    position: relative;
+}
+.footer .footer_item ul .str{
+    font-family: 'pre_m';
+}
+.footer .footer_item ul li::before{
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #595959;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translate(0,-55%);
+}
+.footer .footer_item ul li:nth-child(1)::before{
+    display: none;
+}

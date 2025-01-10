@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'pre_ex';
+    src: url('font/pretendard/Pretendard-ExtraBold.eot');
+    src: url('font/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('font/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('font/pretendard/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'pre_b';
+    src: url('font/pretendard/Pretendard-Bold.eot');
+    src: url('font/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('font/pretendard/Pretendard-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'pre_l';
+    src: url('font/pretendard/Pretendard-Light.eot');
+    src: url('font/pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('font/pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('font/pretendard/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'pre_m';
+    src: url('font/pretendard/Pretendard-Medium.eot');
+    src: url('font/pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('font/pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('font/pretendard/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'The Jamsil 6';
+    src: url('font/theJamsil/TheJamsil6ExtraBold.eot');
+    src: url('font/theJamsil/TheJamsil6ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('font/theJamsil/TheJamsil6ExtraBold.woff2') format('woff2'),
+        url('font/theJamsil/TheJamsil6ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'The Jamsil 2';
+    src: url('font/theJamsil/TheJamsil2Light.eot');
+    src: url('font/theJamsil/TheJamsil2Light.eot?#iefix') format('embedded-opentype'),
+        url('font/theJamsil/TheJamsil2Light.woff2') format('woff2'),
+        url('font/theJamsil/TheJamsil2Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 18px;
+    color: #333;
+}
+
+li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.title{
+    text-align: center;
+}
+.title h1{
+    font-family: 'The Jamsil 6';
+    font-size: 300%;
+    margin-bottom: 4px;
+}
+.title p{
+    font-family: 'The Jamsil 2';
+    font-size: 150%;
+}

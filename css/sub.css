@@ -1,0 +1,404 @@
+@charset "UTF-8";
+@import url(common.css);
+@import url(reseter.css);
+
+
+/* 헤더상단 */
+.wrap .back{
+    width: 100%; 
+    background-color: #2E2E2E;
+}
+.wrap .back .top{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    height: 45px;
+    margin: 0 auto;
+}
+.wrap .back .top ul{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #f5f5f5;
+}
+.wrap .back .top ul li a{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.wrap .back .top ul li img{
+    margin-right: 5px;
+}
+.wrap .back .top ul li p{
+    font-size: 16px;
+}
+
+/* 메인 */
+.main_visual{
+    width: 100%;
+}
+.main_visual img{
+    width: 100%;
+    height: 15.42vw;
+    object-fit: cover;
+}
+
+/* section1 */
+.section1{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin: 160px auto;
+}
+.section1 .icon_wrap{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+.section1 .icon_wrap .icon{
+    width: 150px;
+    height: 150px;
+    background-color: #f5f5f5;
+    display: block;
+    border-radius: 45px;
+}
+.section1 .icon_wrap .icon a{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    display: block;
+}
+.section1 .icon_wrap .icon a strong{
+    width: 100%;
+    height: 100%;
+    font-family: 'The Jamsil 6';
+    font-size: 24px;
+}
+.section1 .icon_wrap .icon a img{
+    width: 75%;
+    height: 100%;
+    object-fit:contain;
+}
+.section1 .icon_wrap .icon p{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'pre_m';
+    font-size: 20px;
+}
+.section1 .icon_wrap .icon.active{
+    background-color: #ED2121;
+}
+.section1 .icon_wrap .icon.active a{
+    color: #f5f5f5;
+}
+
+
+/* section2 */
+.section2{
+    background-color: #f5f5f5;
+    padding-bottom: 60px;
+}
+.section2 .title{
+    padding: 40px 0;
+}
+.section2 .mySwiper2{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    height: 372px;
+    margin: 0 auto;
+}
+.section2 .mySwiper2 .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 100%;
+    margin: 0 20px;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide a{
+    width: 100%;
+}
+.section2 .mySwiper2 .swipper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .text{
+    text-align: center;
+    margin: 20px 0 0;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .text h3{
+    font-family: 'pre_m';
+    font-size: 22px;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .text span{
+    font-family: 'pre_l';
+    font-size: 14px;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .price{
+    display: flex;
+    justify-content:center;
+    gap: 9px;
+    padding-top: 10px;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .price strong{
+    font-family: 'pre_b';
+    font-size: 20px;
+    color: #ED2121;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .price h3{
+    font-family: 'pre_b';
+    font-size: 20px;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .price span{
+    font-family: 'pre_b';
+    font-size: 16px;
+}
+.section2 .mySwiper2 .swiper-wrapper .swiper-slide .price p{
+    font-family: 'pre_r';
+    color: #A9A9A9;
+    text-decoration: line-through;
+}
+
+.mySwiper2 .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 0%;
+    height: 25%;
+    width: 52px;
+    background: url('../img/aa_b.png') center center / 100% no-repeat;
+}
+.mySwiper2 .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: 0%;
+    height: 25%;
+    width: 52px;
+    background: url('../img/Forward_b.png') center center / 100% no-repeat;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    display: none;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    display: none;
+}
+
+/* section3 */
+.section3{
+    margin: 160px 0;
+    padding: 40px 0;
+}
+.section3 .title{
+    margin-bottom: 40px;
+}
+.section3 .mySwiper3{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide .text{
+    display: none;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide-active .text{
+    display: block;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    object-fit: cover;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide-active{
+    width: 505px;
+    height: 632px;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide-prev, .swiper-wrapper .swiper-slide-next{
+    height: 243px;
+    width: 23.79%;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide-prev a{
+    width: 100%;
+    height: 100%;
+
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide-next a{
+    width: 100%;
+    height: 100%;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide-prev img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide-next img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide .text{
+    text-align: center;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide .text p{
+    font-family: 'pre_m';
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide .text span{
+    font-family: 'pre_l';
+    font-size: 14px;
+    word-break: keep-all;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide .text .price{
+    margin: 50px auto 0;
+    width: 234px;
+    height: 52px;
+    line-height: 52px;
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    display: block;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide .text .price h3{
+    font-family: 'pre_b';
+    font-size: 24px;
+}
+.section3 .mySwiper3 .swiper-wrapper .swiper-slide .text .price span{
+    font-family: 'pre_b';
+    font-size: 18px;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    left: 0%;
+    height: 25%;
+    width: 52px;
+    background: url('../img/Forward_b.png') center center / 100% no-repeat;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    right: 0%;
+    height: 25%;
+    width: 52px;
+    background: url('../img/aa_b.png') center center / 100% no-repeat;
+}
+
+/* section4 */
+.section4 .title{
+    margin: 40px 0;
+}
+.section4 .items_wrap2{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+.section4 .items_wrap2 .item{
+    margin-right: 20px;
+    width: 23.79%;
+}
+.section4 .items_wrap2 .item a{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    align-content: center;
+    background-color: #f5f5f5;
+    display: block;
+    border-radius: 15px;
+}
+.section4 .items_wrap2 .item a img{
+    object-fit: contain;
+}
+
+.section4 .items_wrap2 .item .text{
+    text-align: center;
+    margin-top: 20px;
+}
+.section4 .items_wrap2 .item .text h3{
+    font-family: 'pre_m';
+    font-size: 22px;
+}
+.section4 .items_wrap2 .item .text span{
+    font-family: 'pre_l';
+    font-size: 14px;
+    margin-top: 8px;
+    color: #595959;
+}
+.section4 .items_wrap2 .item .price{
+    font-family: 'pre_b';
+    text-align: center;
+    margin-top: 27px;
+}
+.section4 .items_wrap2 .item .price h3{
+    font-size: 20px;
+}
+.section4 .items_wrap2 .item .price span{
+    font-size: 16px;
+}
+
+
+
+
+/* section5 */
+.section5{
+    margin: 160px 0;
+    background-color: #f5f5f5;
+}
+.section5 .title{
+    padding-top: 40px;
+    margin-bottom: 60px;
+}
+.section5 .items{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    
+}
+.section5 .items .item_99{
+    width: 23.79%;
+    display: block;
+    overflow: hidden;
+}
+.section5 .items .item_99 img{
+    height: 250px;
+    transition: 0.5s;
+}
+.section5 .items .item_99:hover img{
+    transform: scale(1.3)
+}
+.section5 .items .item_99 .text{
+    text-align: center;
+}
+.section5 .items .item_99 .text h3{
+    font-family: 'pre_m';
+    font-size: 22px;
+    margin: 20px 0 8px;
+} 
+.section5 .items .item_99 .text span{
+    font-family: 'pre_l';
+    font-size: 14px;
+    color: #595959;
+}
+.section5 .items .item_99 .price{
+    text-align: center;
+    margin-top: 27px;
+}
+.section5 .items .item_99 .price h3{
+    font-family: 'pre_b';
+    font-size: 20px;
+}
+.section5 .items .item_99 .price span{
+    font-size: 16px;
+}
+
+/* section6 */
+.section6{
+    width: 100%;
+    height: 11.72vw;
+}
+
+.section6 .mySwiper6 > .swiper-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

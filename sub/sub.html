@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스토어</title>
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(function(){
+            $('.icon').click(function(){
+                $('.icon').removeClass('active');
+                $(this).addClass('active');
+            });
+
+
+            var swiper = new Swiper(".mySwiper2", {
+                speed: 1400,
+                slidesPerView: 4,
+                spaceBetween: 20,
+                centeredSlides: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            var swiper = new Swiper(".mySwiper3", {
+                grabCursor: true,
+                centeredSlides: true,
+                speed: 1400,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            var swiper = new Swiper(".mySwiper6", {
+                centeredSlides: true,
+                speed: 3000,
+                grabCursor: false,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="back">
+            <div class="top">
+                <ul>
+                    <li>
+                        <a href="#"><img src="../img/Instagram_w.png" alt="인스타그램"><p>인스타그램</p></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../img/YouTube_w.png" alt="유튜브"><p>유튜브</p></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../img/Facebook_w.png" alt="페이스북"><p>페이스북</p></a>
+                    </li>
+                </ul>
+            </div><!-- top -->
+        </div>
+        <header class="header"></header>
+
+        <main class="main_visual"><img src="../img/image_sub.png" alt=""></main>
+
+        <section class="section1">
+            <div class="icon_wrap">
+                <div class="icon active">
+                    <a href="#"><strong>ALL</strong></a>
+                    <p>전 제품</p>
+                </div><!-- icon -->
+                <div class="icon">
+                    <a href="#"><strong>BEST</strong></a>
+                    <p>베스트</p>
+                </div><!-- icon -->
+                <div class="icon">
+                    <a href="#"><img src="../img/sub_포토카드_ID_.png" alt=""></a>
+                    <p>포토카드</p>
+                </div><!-- icon -->
+                <div class="icon">
+                    <a href="#"><img src="../img/sub_일반.png" alt=""></a>
+                    <p>관람권</p>
+                </div><!-- icon -->
+                <div class="icon">
+                    <a href="#"><img src="../img/sub_오리지널팝콘L.png" alt=""></a>
+                    <p>스낵음료</p>
+                </div><!-- icon -->
+            </div><!-- icon_wrap -->
+        </section><!-- section1 -->
+
+        <section class="section2">
+            <div class="title">
+                <h1>베스트</h1>
+                <p>BEST</p>
+            </div><!-- title -->
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_대가족_삼남매.jpg" alt="">
+                            <div class="text">
+                                <h3>[대가족]특가_삼남매 관람권</h3>
+                                <span>영화 [대가족] 전용 2D일반 관람권 3매</span>
+                            </div><!-- text -->
+                            <div class="price">
+                                <strong>35%</strong>
+                                <h3>25,500<span>원</span></h3>
+                                <p>39,000원</p>
+                            </div><!-- price -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_대가족.jpg" alt="">
+                            <div class="text">
+                                <h3>[대가족]특가_'대'남매 관람권</h3>
+                                <span>영화 [대가족] 전용 2D일반 관람권 5매</span>
+                            </div><!-- text -->
+                            <div class="price">
+                                <strong>36%</strong>
+                                <h3>41,500<span>원</span></h3>
+                                <p>65,000원</p>
+                            </div><!-- price -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_대가족_가족끼리.jpg" alt="">
+                            <div class="text">
+                                <h3>[대가족]특가_가족끼리 패키지</h3>
+                                <span>영화 [대가족] 전용 2D일반 관람권 2매<br>스위트콤보 교환 1매</span>
+                            </div><!-- text -->
+                            <div class="price">
+                                <strong>35%</strong>
+                                <h3>24,000<span>원</span></h3>
+                                <p>37,000원</p>
+                            </div><!-- price -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_대가족_우리가족.jpg" alt="">
+                            <div class="text">
+                                <h3>[대가족]특특가_우리가족 패키지</h3>
+                                <span>영화 [대가족] 전용 2D일반 관람권 4매<br>더블콤보 교환권 1매</span>
+                            </div><!-- text -->
+                            <div class="price">
+                                <strong>34%</strong>
+                                <h3>44,000<span>원</span></h3>
+                                <p>67,000원</p>
+                            </div><!-- price -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_일반.jpg" alt="">
+                            <div class="text">
+                                <h3>일반 관람권</h3>
+                                <span>일반 관람권 1매</span>
+                            </div><!-- text -->
+                            <div class="price">
+                                <h3>13,000<span>원</span></h3>
+                            </div><!-- price -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_샤롯대.jpg" alt="">
+                            <div class="text">
+                                <h3>샤롯데 관람권</h3>
+                                <span>샤롯데 관람권 1매</span>
+                            </div><!-- text -->
+                            <div class="price">
+                                <h3>35,000<span>원</span></h3>
+                            </div><!-- price -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_콜라M.jpg" alt="">
+                            <div class="text">
+                                <h3>콜라 M</h3>
+                                <span>콜라 M</span>
+                            </div><!-- text -->
+                            <div class="price">
+                                <h3>3,000<span>원</span></h3>
+                            </div><!-- price -->
+                        </a>
+                    </div>
+                </div><!-- wrapper -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section><!-- section2 -->
+
+        <section class="section3">
+            <div class="title">
+                <h1>포토카드</h1>
+                <p>PHOTOCARD</p>
+            </div><!-- title -->
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_포토카드_일반.png" alt="">
+                            <div class="text">
+                                <p>포토카드 일반 4종</p>
+                                <span>2025년 1월 1일 0시부터 포토카드(일반) 판매가격이 1,500원으로 변경됩니다.</span>
+                                <div class="price">
+                                    <h3>1,000 <span>원</span></h3>
+                                </div>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_포토카드_ID.png" alt="">
+                            <div class="text">
+                                <p>ID카드 프레임(10~12월) 포토카드</p>
+                                <span>카드 앞면은 ID카드 프레임(10~12월) 포토카드 탬플릿 선택과 나만의 사진 추가, 뒷면은 원하는 문구를 입력할 수 있습니다</span>
+                                <div class="price">
+                                    <h3>3,000 <span>원</span></h3>
+                                </div>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_포토카드_산리오.png" alt="">
+                            <div class="text">
+                                <p>산리오캐릭터즈(10~12월) 포토카드</p>
+                                <span>카드 앞면은 산리오캐릭터즈(10~12월) 포토카드 탬플릿 선택과 나만의 사진 추가, 뒷면은 원하는 문구를 입력할 수 있습니다.</span>
+                                <div class="price">
+                                    <h3>3,000 <span>원</span></h3>
+                                </div>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_포토카드_새해.png" alt="">
+                            <div class="text">
+                                <p>새해 프레임 포토카드</p>
+                                <span>카드 앞면은 새해 프레임 포토카드 템플릿 선택과 나만의 사진 추가, 뒷면은 원하는 문구를 입력할 수 있습니다.</span>
+                                <div class="price">
+                                    <h3>2,000 <span>원</span></h3>
+                                </div>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_포토카드_생일.png" alt="">
+                            <div class="text">
+                                <p>생일 프레임(10~12월) 포토카드</p>
+                                <span>카드 앞면은 생일 프레임(10~12월) 포토카드 탬플릿 선택과 나만의 사진 추가, 뒷면은 원하는 문구를 입력할 수 있습니다.</span>
+                                <div class="price">
+                                    <h3>3,000 <span>원</span></h3>
+                                </div>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_포토카드_짱구.png" alt="">
+                            <div class="text">
+                                <p>짱구는못말려(10~12월) 포토카드</p>
+                                <span>카드 앞면은 짱구는못말려(10~12월) 포토카드 탬플릿 선택과 나만의 사진 추가, 뒷면은 원하는 문구를 입력할 수 있습니다.</span>
+                                <div class="price">
+                                    <h3>3,000 <span>원</span></h3>
+                                </div>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="../img/sub_포토카드_크리스마스.png" alt="">
+                            <div class="text">
+                                <p>크리스마스 프레임 포토카드</p>
+                                <span>카드 앞면은 크리스마스 프레임 포토카드 탬플릿 선택과 나만의 사진 추가, 뒷면은 원하는 문구를 입력할 수 있습니다.</span>
+                                <div class="price">
+                                    <h3>2,000 <span>원</span></h3>
+                                </div>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section><!-- section3 -->
+
+        <section class="section4">
+            <div class="title">
+                <h1>관람권</h1>
+                <p>ADMISSION TICKET</p>
+            </div><!-- title -->
+            <div class="items_wrap2">
+                <div class="item">
+                    <a href="#">
+                        <img src="../img/sub_일반.png" alt="">
+                    </a>
+                        <div class="text">
+                            <h3>일반 관람권</h3>
+                            <span>일반 관람권 1매</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>13,000<span>원</span></h3>
+                        </div><!-- price -->
+                </div><!-- item -->
+                <div class="item">
+                    <a href="#">
+                        <img src="../img/sub_샤롯대.png" alt="">
+                    </a>
+                        <div class="text">
+                            <h3>샤롯데 관람권</h3>
+                            <span>샤롯데 관람권 1매</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>35,000<span>원</span></h3>
+                        </div><!-- price -->
+                </div><!-- item -->
+            </div><!-- items_wrap2 -->
+        </section><!-- section4 -->
+
+        <section class="section5">
+            <div class="title">
+                <h1>스낵 음료</h1>
+                <p>SNACK DRINK</p>
+            </div><!-- title -->
+            <div class="items">
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_스위트콤보.jpg" alt="">
+                        <div class="text">
+                            <h3>스위트 콤보</h3>
+                            <span>오리지널 팝콘 L + 탄산음료 M2</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>11,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_더블콤보.jpg" alt="">
+                        <div class="text">
+                            <h3>더블 콤보</h3>
+                            <span>오리지널 팝콘M + 탄산음료M2</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>15,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_반반.jpg" alt="">
+                        <div class="text">
+                            <h3>반반팝콘(오리지널/카라멜) L</h3>
+                            <span>반반팝콘(오리지널/카라멜) L</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>7,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_오리지널팝콘L.jpg" alt="">
+                        <div class="text">
+                            <h3>오리지널 팝콘 L</h3>
+                            <span>오리지널 팝콘 L</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>6,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_오리지널팝콘M.jpg" alt="">
+                        <div class="text">
+                            <h3>오리지널 팝콘 M</h3>
+                            <span>오리지널 팝콘 M</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>5,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_카라멜팝콘L.jpg" alt="">
+                        <div class="text">
+                            <h3>카라멜 팝콘 L</h3>
+                            <span>카라멜 팝콘 L</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>7,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_카라멜팝콘M.jpg" alt="">
+                        <div class="text">
+                            <h3>카라멜 팝콘 M</h3>
+                            <span>카라멜 팝콘 M</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>6,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_콜라L.jpg" alt="">
+                        <div class="text">
+                            <h3>콜라 L</h3>
+                            <span>콜라 L</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>3,500<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_콜라M.jpg" alt="">
+                        <div class="text">
+                            <h3>콜라 M</h3>
+                            <span>콜라  M</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>3,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_사이다L.jpg" alt="">
+                        <div class="text">
+                            <h3>사이다 L</h3>
+                            <span>사이다 L</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>3,500<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+                <div class="item_99">
+                    <a href="#">
+                        <img src="../img/sub_사이다M.jpg" alt="">
+                        <div class="text">
+                            <h3>사이다 M</h3>
+                            <span>사이다 M</span>
+                        </div><!-- text -->
+                        <div class="price">
+                            <h3>3,000<span>원</span></h3>
+                        </div><!-- price -->
+                    </a>
+                </div><!-- item -->
+            </div><!-- items -->
+        </section><!-- section5 -->
+
+        <section class="section6">
+            <div class="swiper mySwiper6">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../img/sub_광2 1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../img/sub_광.png" alt=""></div>
+                </div>
+            </div>
+        </section><!-- section6 -->
+
+        <footer class="footer"></footer>
+    </div><!-- wrap -->
+</body>
+</html>

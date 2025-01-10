@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <script>
+        $(function(){
+            $('.gnb > li').mouseenter(function(){
+                $(this).find('.depth2').stop().slideDown();
+                
+            })
+            $('.gnb > li').mouseleave(function(){
+                $('.depth2').stop().slideUp();
+            })
+
+            let header = document.querySelector('.header');
+            window.addEventListener('scroll' , () => {
+                let scrollb = window.scrollY;
+                console.log(scrollb);
+                if (scrollb > 0){
+                    header.classList.add('active');
+                }
+                else{
+                    header.classList.remove('active');
+                }
+            });
+
+            $('.nav ul li').mouseenter(function(){
+                /* console.log($(this).position().left); */
+
+                $('.nav .menu_bar').stop().animate({
+                    left : $(this).position().left
+                });
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="/"><img src="../img/logo.png" alt=""></a>
+            </h1><!-- logo -->
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li>
+                        <a href="#" class="depth1">예매</a>
+                        <ul class="depth2">
+                            <li><a href="#">예매하기</a></li>
+                            <li><a href="#">상영시간표</a></li>
+                            <li><a href="#">할인안내</a></li>
+                        </ul><!-- depth2 -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth1">영화</a>
+                        <ul class="depth2">
+                            <li><a href="#">홈</a></li>
+                            <li><a href="#">현재상영작</a></li>
+                            <li><a href="#">상영예정작</a></li>
+                            <li><a href="#">아르떼</a></li>
+                        </ul><!-- depth2 -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth1">영화관</a>
+                        <ul class="depth2">
+                            <li><a href="#">스폐셜관</a></li>
+                            <li><a href="#">지역검색</a></li>
+                        </ul><!-- depth2 -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth1">이벤트</a>
+                        <ul class="depth2">
+                            <li><a href="#">영화</a></li>
+                            <li><a href="#">시사회/무대인사</a></li>
+                            <li><a href="#">HOT</a></li>
+                            <li><a href="#">제휴할인</a></li>
+                        </ul><!-- depth2 -->
+                    </li>
+                    <li>
+                        <a href="sub/sub.html" class="depth1">스토어</a>
+                        <ul class="depth2">
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">관람권</a></li>
+                            <li><a href="#">스낵음료</a></li>
+                            <li><a href="#">포토카드</a></li>
+                        </ul><!-- depth2 -->
+                    </li>
+                </ul><!-- gnb -->
+                <div class="menu_bar">
+                    <span>메뉴바</span>
+                </div><!-- menu_bar -->
+            </nav><!-- nav -->
+
+            <ul class="util">
+                <li><a href="#" class="login"><img src="../img/User (1).png" alt=""><p>로그인</p></a></li>
+                <li><a href="#" class="ticket"><img src="../img/Ticket (1).png" alt=""><p>예매하기</p></a></li>
+                <li><a href="#" class="menu"><img src="../img/Menu (3).png" alt=""></a></li>
+            </ul>
+        </div><!-- inner -->
+    </header><!-- header -->
+</body>
+</html>

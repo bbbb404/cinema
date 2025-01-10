@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데시네마</title>
+    <link rel="stylesheet" href="css/home.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(function(){
+            $('.gnb > li').mouseenter(function(){
+                $(this).find('.depth2').stop().slideDown();
+                
+            })
+            $('.gnb > li').mouseleave(function(){
+                $('.depth2').stop().slideUp();
+            })
+
+            var swiper = new Swiper(".mySwiper", {
+                centeredSlides: true,
+                speed: 1300,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }
+            });
+
+            var swiper = new Swiper(".mySwiper1", {
+                effect: "coverflow",
+                centeredSlides: true,
+                slidesPerView: "5",
+                coverflowEffect: {
+                    rotate: 15,
+                    stretch: 30,
+                    depth: 130,
+                    modifier: 2,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            var swiper2 = new Swiper(".mySwiper2", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                speed: 1300,
+                slidesPerView: "3",
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+            $('.stop').click(function(){
+                swiper2.autoplay.stop()
+            })
+            $('.play').click(function(){
+                swiper2.autoplay.start()
+            })
+
+            var swiper = new Swiper(".mySwiper3", {
+                spaceBetween: 30,
+                loop: true,
+                speed: 1300,
+                slidesPerView: "4",
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            var swiper = new Swiper(".mySwiper4", {
+                direction: "vertical",
+                speed: 1300,
+                spaceBetween: 30,
+                slidesPerView: "1",
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+
+            var swiper = new Swiper(".mySwiper5", {
+                direction: "vertical",
+                speed: 1300,
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+                mousewheel: true,
+            });
+
+
+            let header = document.querySelector('.header');
+            window.addEventListener('scroll' , () => {
+                let scrollb = window.scrollY;
+                console.log(scrollb);
+                if (scrollb > 0){
+                    header.classList.add('active');
+                }
+                else{
+                    header.classList.remove('active');
+                }
+            });
+        })
+    </script>
+
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="img/logo_wht.png" alt=""></a>
+                </h1><!-- logo -->
+
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth1">예매</a>
+                            <ul class="depth2">
+                                <li><a href="#">예매하기</a></li>
+                                <li><a href="#">상영시간표</a></li>
+                                <li><a href="#">할인안내</a></li>
+                            </ul><!-- depth2 -->
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">영화</a>
+                            <ul class="depth2">
+                                <li><a href="#">홈</a></li>
+                                <li><a href="#">현재상영작</a></li>
+                                <li><a href="#">상영예정작</a></li>
+                                <li><a href="#">아르떼</a></li>
+                            </ul><!-- depth2 -->
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">영화관</a>
+                            <ul class="depth2">
+                                <li><a href="#">스폐셜관</a></li>
+                                <li><a href="#">지역검색</a></li>
+                            </ul><!-- depth2 -->
+                        </li>
+                        <li>
+                            <a href="#" class="depth1">이벤트</a>
+                            <ul class="depth2">
+                                <li><a href="#">영화</a></li>
+                                <li><a href="#">시사회/무대인사</a></li>
+                                <li><a href="#">HOT</a></li>
+                                <li><a href="#">제휴할인</a></li>
+                            </ul><!-- depth2 -->
+                        </li>
+                        <li>
+                            <a href="sub/sub.html" class="depth1">스토어</a>
+                            <ul class="depth2">
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">관람권</a></li>
+                                <li><a href="#">스낵음료</a></li>
+                                <li><a href="#">포토카드</a></li>
+                            </ul><!-- depth2 -->
+                        </li>
+                    </ul><!-- gnb -->
+                </nav><!-- nav -->
+
+                <ul class="util">
+                    <li><a href="#" class="login"><img src="img/User.png" alt=""><p>로그인</p></a></li>
+                    <li><a href="#" class="ticket"><img src="img/Ticket.png" alt=""><p>예매하기</p></a></li>
+                    <li><a href="#" class="menu"><img src="img/Menu (1).png" alt=""></a></li>
+                </ul>
+            </div><!-- inner -->
+        </header><!-- header -->
+
+        <main>
+            <section class="main_visual">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="img/main (1).jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="img/main (2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- main_visual -->
+        </main>
+
+        <section class="section1">
+            <div class="title">
+                <h1>현재 상영작</h1>
+                <p>Current Screenings</p>
+            </div><!-- title -->
+
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/3.jpg" alt="위키드">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div><!-- image -->
+                        <div class="text">
+                            <h4>위키드</h4>
+                            <ul class="date">
+                                <li>2024.11.20 개봉</li>
+                                <li>160분</li>
+                                <li><img src="img/grade_all.png" alt=""></li>
+                                <li>174.3만명</li>
+                            </ul>
+                            <span>자신의 진정한 힘을 미처 발견하지 못한 '엘파바'(신시아 에리보)
+                                자신의 진정한 본성을 아직 발견하지 못한 ‘글린다'(아리아나 그란데)
+                                전혀 다른 두 사람은 마법 같은 우정을 쌓아간다.
+                                그러던 어느 날, '마법사'의 초대를 받아 에메랄드 시티로 가게 되고
+                                운명은 예상치 못한 위기와 모험으로 두 사람을 이끄는데…
+                                
+                                마법 같은 운명의 시작, 누구나 세상을 날아오를 수 있어</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/4.jpg" alt="모아나2">
+                            <div class="button">
+                                <a href="#"></a><h2>상세보기</h2>
+                                <a href="#"></a><h2>예매하기</h2>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>모아나2</h4>
+                            <ul class="date">
+                                <li>2024.11.27 개봉</li>
+                                <li>99분</li>
+                                <li><img src="img/grade_all.png" alt=""></li>
+                                <li>280.2만명</li>
+                            </ul>
+                            <span><겨울왕국> & <인사이드 아웃> 시리즈의 흥행 계보를 이을
+                                레전드 디즈니 애니메이션의 귀환!
+
+                                11월 27일, 더 커진 스케일의 모험,
+                                눈과 귀를 사로잡을 스펙터클 오션 비주얼,
+                                황홀한 음악을 오직 극장에서 경험하라!</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/5.jpg" alt="글래디에이터2">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>글래디에이터 2</h4>
+                            <ul class="date">
+                                <li>2024.11.13 개봉</li>
+                                <li>148분</li>
+                                <li><img src="img/pc_grade_19.png" alt=""></li>
+                                <li>90.7만명</li>
+                            </ul>
+                            <span>‘아카시우스’ 장군이 이끄는 로마군에 대패한 후 모든 것을 잃고 노예로 전락한 ‘루시우스’는
+                                강한 권력욕을 지닌 ‘마크리누스’의 눈에 띄어 검투사로 발탁된다.
+                                로마를 향한 걷잡을 수 없는 분노, 타고난 투사의 기질로 콜로세움에 입성하게 된 ‘루시우스’는
+                                결투를 거듭하며 자신이 진짜 누구인지 알게 되고
+                                마침내 로마의 운명을 건 결전을 준비하게 되는데...!
+                                </span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/7.jpg" alt="하얼빈">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>하얼빈</h4>
+                            <ul class="date">
+                                <li>2024.12.24 개봉</li>
+                                <li>113분</li>
+                                <li><img src="img/grade_15.png" alt=""></li>
+                            </ul>
+                            <span>빼앗긴 나라를 되찾기 위해 마음을 함께하는 이들이 모이게 된다.
+                                이토 히로부미가 러시아와 협상을 위해 하얼빈으로 향한다는 소식을 접한 안중근과 독립군들은 하얼빈으로 향하고,
+                                내부에서 새어 나간 이들의 작전 내용을 입수한 일본군들의 추격이 시작되는데…
+                                
+                                하얼빈을 향한 단 하나의 목표,
+                                늙은 늑대를 처단하라</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/8.jpg" alt="저니 투 베들레헴">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>저니 투 베들레헴</h4>
+                            <ul class="date">
+                                <li>2024.11.20 개봉</li>
+                                <li>99분</li>
+                                <li><img src="img/grade_all.png" alt=""></li>
+                                <li>1.7만명</li>
+                            </ul>
+                            <span>어느 날, 천사장 ‘가브리엘’이 ‘마리아’에게 찾아와
+                                훗날 구세주이자 왕이 될 아이를 낳게 될 것이니 잘 돌보라 명하게 되고,
+                                한 순간에 너무나 무거운 책임을 지게 된 ‘마리아’는
+                                이 일로 약혼자 ‘요셉’과의 관계도 위태로워진다.
+
+                                과연 ‘마리아’는 자신의 사랑과 아이 모두를 지킬 수 있을까?</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/9.jpg" alt="청설">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>청설</h4>
+                            <ul class="date">
+                                <li>2024.11.06 개봉</li>
+                                <li>108분</li>
+                                <li><img src="img/grade_all.png" alt=""></li>
+                                <li>79.8만명</li>
+                            </ul>
+                            <span>손으로 설렘을 말하고
+                                가슴으로 사랑을 느끼는,
+                                청량한 설렘의 순간
+                            
+                                손으로 말하는 ‘여름’과 더 가까워지기 위해 더 잘 듣기보단 더 잘 보고 느끼려 노력하지만,
+                                마침내 가까워졌다 생각하던 찰나 ‘여름’은 왜인지 자꾸 ‘용준’과 멀어지려 하는데…</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/10.jpg" alt="히든페이스">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>히든페이스</h4>
+                            <ul class="date">
+                                <li>2024.11.20 개봉</li>
+                                <li>115분</li>
+                                <li><img src="img/pc_grade_19.png" alt=""></li>
+                                <li>98.4만명</li>
+                            </ul>
+                            <span>
+                                지휘자 '성진'(송승헌)이 이끄는 오케스트라의 첼리스트이자 약혼녀 '수연'(조여정)이
+                                어느 날 영상 편지만을 남겨둔 채 자취를 감춘다.
+                                '성진'은 '수연'을 잃은 상실감에 고통스러워하지만,
+                                그녀를 대신한 첼리스트 ‘미주’(박지현)에게 강한 끌림을 느낀다.
+                                비 오는 밤, 서로의 욕망에 휩쓸린 ‘성진’과 ‘미주’는
+                                ‘수연’의 집에서 용서받지 못할 짓을 저지른다.
+
+                                한편 사라진 줄 알았던 '수연'은
+                                혼자서는 절대 나올 수 없는 집 안 밀실에 갇혀 숨겨진 민낯을 지켜보는데...</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/11.jpg" alt="소방관">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>소방관</h4>
+                            <ul class="date">
+                                <li>2024.12.04 개봉</li>
+                                <li>106분</li>
+                                <li><img src="img/grade_12.png" alt=""></li>
+                                <li>192.4만명</li>
+                            </ul>
+                            <span>
+                                누군가의 가족, 친구, 사랑하는 사람
+                                우리가 기억해야 할 그 이름
+                                <소방관>
+                                2001년 가장 빛났던 그들의 이야기를 기억하겠습니다.</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/12.jpg" alt="서브스턴스">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>서브스턴스</h4>
+                            <ul class="date">
+                                <li>2024.12.11 개봉</li>
+                                <li>141분</li>
+                                <li><img src="img/pc_grade_19.png" alt=""></li>
+                                <li>6.8만명</li>
+                            </ul>
+                            <span>
+                                단 한 가지 규칙, 당신에게 주어진 시간을 지킬 것.
+                                각각 7일간의 완벽한 밸런스를 유지한다면 무엇이 잘못되겠는가?
+                                ‘기억하라, 당신은 하나다!’</span>
+                        </div><!-- text -->
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/14.jpg" alt="대가족">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>대가족</h4>
+                            <ul class="date">
+                                <li>2024.12.11 개봉</li>
+                                <li>106분</li>
+                                <li><img src="img/grade_12.png" alt=""></li>
+                                <li>22.5만명</li>
+                            </ul>
+                            <span>
+                                줄이 끊이지 않는 맛집 사장 무옥
+                                승려 선언한 외아들 문석 때문에 대가 끊기다?
+                                마지막 함씨 가문! 세울 것인가, 무너질 것인가!</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/15.jpg" alt="1승">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>1승</h4>
+                            <ul class="date">
+                                <li>2024.12.04 개봉</li>
+                                <li>107분</li>
+                                <li><img src="img/grade_12.png" alt=""></li>
+                                <li>29.9만명</li>
+                            </ul>
+                            <span>모두가 주목하는 구단이 됐지만 압도적인 연패 행진을 이어가는 ‘핑크스톰’.
+                                패배가 익숙했던 ‘우진’도 점점 울화통이 치밀고,
+                                경험도 가능성도 없는 선수들과 함께 단 한번만이라도 이겨보고 싶은 마음이 생기는데…</span>
+                        </div><!-- text -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image">
+                            <img src="img/16.jpg" alt="무파사 라이온킹">
+                            <div class="button">
+                                <a href="#"><h2>상세보기</h2></a>
+                                <a href="#"><h2>예매하기</h2></a>
+                            </div><!-- button -->
+                        </div>
+                        <div class="text">
+                            <h4>무파사: 라이온킹</h4>
+                            <ul class="date">
+                                <li>2024.12.18 개봉</li>
+                                <li>118분</li>
+                                <li><img src="img/grade_all.png" alt=""></li>
+                                <li>2,017명</li>
+                            </ul>
+                            <span>‘라이온 킹’ 탄생 30주년 기념작
+                                외로운 고아에서 전설적인 왕으로 거듭난 ‘무파사’의 숨겨진 이야기가 베일을 벗는다!</span>
+                        </div><!-- text -->
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+        </section><!-- section1 -->
+
+
+        <section class="section2">
+            <div class="left">
+                <div class="title">
+                    <h1>스페셜 관</h1>
+                    <p>Special Theater For You</p>
+                </div>
+                <p>영화의 순간을<br>더욱 특별하게</p>
+
+                <div class="button">
+                    <a href="#">
+                        <p>더보기</p>
+                        <img src="img/More Than.png" alt="">
+                    </a>
+                </div><!-- button -->
+            </div><!-- left -->
+            <div class="right">
+                <div class="swiper mySwiper5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/special_char_01.jpg" alt="">
+                            <div class="text">
+                                <h2>샤롯데</h2>
+                                <p>CHARLOTTE</p>
+                            </div><!-- text --></div>
+                        <div class="swiper-slide">
+                            <img src="img/pc_special_supermx4d_img1.jpg" alt="">
+                            <div class="text">
+                                <h2>수퍼 MX4D</h2>
+                                <p>SUPER MX4D</p>
+                            </div><!-- text -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/special_super4d_01.jpg" alt="">
+                            <div class="text">
+                                <h2>수퍼 4D</h2>
+                                <p>SUPER 4D</p>
+                            </div><!-- text -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/special_cinecomfort_01.jpg" alt="">
+                            <div class="text">
+                                <h2>리클라이너</h2>
+                                <p>RECLINER</p>
+                            </div><!-- text -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/special_cinecouple_01.jpg" alt="">
+                            <div class="text">
+                                <h2>씨네 커플</h2>
+                                <p>CINE COUPLE</p>
+                            </div><!-- text -->
+                        </div>
+                    </div><!-- wrapper -->
+                </div><!-- myswiper5 -->
+                <div class="swiper mySwiper5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/visual_special_superplex_05-1.jpg" alt="">
+                            <div class="text">
+                                <h2>수퍼 플렉스</h2>
+                                <p>SUPER PLEX</p>
+                            </div><!-- text -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/special_colorium_01.jpg" alt="">
+                            <div class="text">
+                                <h2>수퍼 LED</h2>
+                                <p>SUPER LED</p>
+                            </div><!-- text -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/pc_special_radiantsound_img1.jpg" alt="">
+                            <div class="text">
+                                <h2>광음 시네마</h2>
+                                <p>LIGHTSOUND CINEMA</p>
+                            </div><!-- text -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/special_cinefamily_1.jpg" alt="">
+                            <div class="text">
+                                <h2>씨네 패밀리</h2>
+                                <p>CINE FAMILY</p>
+                            </div><!-- text -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/special_cinebiz_02.jpg" alt="">
+                            <div class="text">
+                                <h2>씨네 비즈</h2>
+                                <p>CINE BIZ</p>
+                            </div><!-- text -->
+                        </div>
+                    </div><!-- wrapper -->
+                </div><!-- myswiper5 -->
+            </div><!-- right -->
+        </section><!-- section2 -->
+
+        <section class="section3">
+            <div class="title">
+                <h1>진행 중 이벤트</h1>
+                <p>Now Event</p>
+            </div><!-- title -->
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/image 1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/image 2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/image 3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/image 4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/image 5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/image 6.png" alt=""></div>
+                </div>
+                <div class="control">
+                    <button class="stop"><img src="img/Stop.png" alt=""></button>
+                    <button class="play"><img src="img/Play.png" alt=""></button>
+                </div><!-- control -->
+            </div>
+        </section><!-- section3 -->
+
+        <section class="section4">
+            <div class="title">
+                <h1>시사회/무대인사</h1>
+                <p>Preview/Stage Greeting</p>
+            </div><!-- title -->
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/14.jpg" alt="대가족">
+                            <div class="text">
+                                <p><대가족> 개봉주 무대인사</p>
+                                <span>2024.12.14 ~ 2024.12.15</span>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/Mask group.png" alt="짱구극장판">
+                            <div class="text">
+                                <p><짱구는못말려 우리들의 공룡일기>프리미어 상영회</p>
+                                <span>2024.12.14 ~ 2024.12.15</span>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/7.jpg" alt="하얼빈">
+                            <div class="text">
+                                <p><하얼빈> 개봉주 무대인사</p>
+                                <span>2024.12.26 ~ 2024.12.29</span>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/Mask group (1).png" alt="">
+                            <div class="text">
+                                <p><김범수 25주년 콘서트> 개봉기념 라이브 무대 인사 & GV 안내</p>
+                                <span>2024.12.14 ~ 2024.12.14</span>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/니코.png" alt="">
+                            <div class="text">
+                                <p><니코:오로라 원정대의 모험><br>프리미어 상영회</p>
+                                <span>2024.12.21 ~ 2024.12.22</span>
+                            </div><!-- text -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bb3">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section><!-- section4 -->
+
+
+        <section class="section5">
+            <div class="items">
+                <div class="left">
+                    <h2>공지사항</h2>
+                    <div class="swiper mySwiper4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">2025 & 2026 VIP 멤버십 운영 변경 안내 </div>
+                            <div class="swiper-slide">회사 사칭 피싱 사기 주의</div>
+                            <div class="swiper-slide">롯데시네마 영상정보처리기기 운영 및 관리방침 개정 안내</div>
+                        </div>
+                    </div><!-- swifer3 -->
+                </div><!-- left -->
+                <div class="right">
+                    <a href="#">
+                        <p>더보기</p>
+                        <img src="img/Right.png" alt="">
+                    </a>
+                </div><!-- right -->
+            </div><!-- items -->
+        </section><!-- section5 -->
+
+        <section class="section6">
+            <div class="item_wrap">
+                <div class="item">
+                    <a href="#">
+                        <img src="img/할인안내.png" alt="할인안내">
+                        <strong>할인안내</strong>
+                    </a>
+                </div><!-- item -->
+                <div class="item">
+                    <a href="#">
+                        <img src="img/포인트.png" alt="포인트">
+                        <strong>포인트</strong>
+                    </a>
+                </div><!-- item -->
+                <div class="item">
+                    <a href="#">
+                        <img src="img/멤버십.png" alt="멤버십">
+                        <strong>멤버십</strong>
+                    </a>
+                </div><!-- item -->
+                <div class="item">
+                    <a href="#">
+                        <img src="img/틴티클럽.png" alt="틴틴클럽">
+                        <strong>틴틴클럽</strong>
+                    </a>
+                </div><!-- item -->
+                <div class="item">
+                    <a href="#">
+                        <img src="img/브라보클럽.png" alt="브라보클럽">
+                        <strong>브라보클럽</strong>
+                    </a>
+                </div><!-- item -->
+            </div><!-- item_wrap -->
+        </section><!-- section6 -->
+
+        <footer class="footer">
+            <div class="footer_item">
+                <div class="award">
+                    <img src="img/footer_award_NCSI8.png" alt="">
+                    <img src="img/footer_award_kcsi.png" alt="">
+                    <img src="img/footer_award_kssqi-11.png" alt="">
+                    <img src="img/footer_award_brandcinema.png" alt="">
+                    <img src="img/footer_award_greenstar.png" alt="">
+                    <img src="img/footer_award_brandstar.png" alt="">
+                    <img src="img/footer_award_familyship.png" alt="">
+                    <img src="img/footer_award_winner.png" alt="">
+                </div><!-- award -->
+                <div class="icons">
+                    <img src="img/logo.png" alt="">
+                    <div class="sns">
+                        <a href="#"><img src="img/Instagram.png" alt=""></a>
+                        <a href="#"><img src="img/YouTube.png" alt=""></a>
+                        <a href="#"><img src="img/Facebook.png" alt=""></a>
+                    </div><!-- sns -->
+                </div><!-- icons -->
+                <div class="company">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>이용약관</li>
+                        <li class="str">개인정보처리방침</li>
+                        <li>이메일무단수집거부</li>
+                        <li>고정형 영상정보처리기기 운영 및 관리방침</li>
+                        <li>L.POINT회원안내</li>
+                        <li>배정기준</li>
+                        <li>채용안내</li>
+                        <li>광고/임대문의</li>
+                        <li>사회적책임</li>
+                    </ul>
+                    <p>서울특별시 송파구 올림픽로 295 삼성생명 잠실빌딩 18F</p>
+                    <ul>
+                        <li>대표이메일 lottecultureworks@lotte.net</li>
+                        <li>고객센터 1544-8855 (유료)</li>
+                        <li>사업자등록번호 313-87-00979</li>
+                        <li>통신판매업신고번호 제1184호</li>
+                        <li>사업자정보확인</li>
+                    </ul>
+                    <ul>
+                        <li>대표이사 최병환</li>
+                        <li>개인정보 보호 책임자 이수민</li>
+                        <li>호스팅 제공자 롯데이노베이트</li>
+                    </ul>
+                </div>
+                <p>Copyright © LOTTE Cultureworks All Right Reserved.</p>
+            </div>
+        </footer>
+    </div><!-- wrap -->
+</body>
+</html>
